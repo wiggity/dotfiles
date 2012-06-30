@@ -1,0 +1,16 @@
+[user]
+	name = Williston Hayes
+	email = wshayes@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[alias]
+	co = checkout
+	st = status
+[color]
+	diff = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
