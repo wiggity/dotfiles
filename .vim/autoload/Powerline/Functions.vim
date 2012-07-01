@@ -57,28 +57,28 @@ function! Powerline#Functions#GetMode() " {{{
 	if mode =~# '\v(v|V|)'
 		" Visual mode
 		if mode ==# 'v'
-			let mode = 'VISUAL'
+			let mode = 'VIS'
 		elseif mode ==# 'V'
-			let mode = 'V·LINE'
+			let mode = 'V·L'
 		elseif mode ==# ''
-			let mode = 'V·BLOCK'
+			let mode = 'V·B'
 		endif
 	elseif mode =~# '\v(s|S|)'
 		" Select mode
 		if mode ==# 's'
-			let mode = 'SELECT'
+			let mode = 'SEL'
 		elseif mode ==# 'S'
-			let mode = 'S·LINE'
+			let mode = 'S·L'
 		elseif mode ==# ''
-			let mode = 'S·BLOCK'
+			let mode = 'S·B'
 		endif
 	elseif mode =~# '\vi'
-		let mode = 'INSERT' " Insert mode
+		let mode = 'INS' " Insert mode
 	elseif mode =~# '\v(R|Rv)'
-		let mode = 'REPLACE' " Replace mode
+		let mode = 'REP' " Replace mode
 	else
 		" Fallback to normal mode
-		let mode = ' N ' " Normal (current)
+		let mode = 'NOR' " Normal (current)
 	endif
 
 	return mode
@@ -118,7 +118,7 @@ function! Powerline#Functions#GetCharCode() " {{{
 
 	" Get the character and the numeric value from the return value of :ascii
 	" This matches the two first pieces of the return value, e.g.
-	" "<F>  70" => char: 'F', nr: '70'
+	" "<F>	70" => char: 'F', nr: '70'
 	let [str, char, nr; rest] = matchlist(ascii, '\v\<(.{-1,})\>\s*([0-9]+)')
 
 	" Format the numeric value
