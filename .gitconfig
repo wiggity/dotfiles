@@ -8,6 +8,7 @@
 [alias]
 	co = checkout
 	st = status
+	dt = difftool
 [color]
 	diff = true
 [diff]
