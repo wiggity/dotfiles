@@ -14,3 +14,6 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[credential]
+	helper = cache
+	halper = cache --timeout=7200
