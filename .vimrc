@@ -8,6 +8,12 @@ set ttymouse=xterm2
 set guioptions-=m
 set guioptions-=T
 set mps=(:),{:},[:],<:>
+set laststatus=2
+
+set wildmenu
+set wildmode=list:longest
+
+let g:Powerline_symbols = 'fancy'
 
 let g:vhdl_indent_genportmap = 0
 filetype plugin indent on
