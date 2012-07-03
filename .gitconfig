@@ -9,6 +9,7 @@
 	co = checkout
 	st = status
 	dt = difftool
+	graph = log --pretty=format:'%h %ae %s' --graph
 [color]
 	diff = true
 [diff]
