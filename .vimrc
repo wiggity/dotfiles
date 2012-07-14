@@ -9,6 +9,8 @@ set guioptions-=m
 set guioptions-=T
 set mps=(:),{:},[:],<:>
 set laststatus=2
+set bg=dark
+set t_Co=16
 
 set wildmenu
 set wildmode=list:longest
