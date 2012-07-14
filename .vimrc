@@ -1,5 +1,7 @@
 syntax on
 
+call pathogen#infect()
+
 set incsearch
 set hlsearch
 set ignorecase
@@ -11,7 +13,6 @@ set mps=(:),{:},[:],<:>
 set laststatus=2
 set bg=dark
 set t_Co=16
-
 set wildmenu
 set wildmode=list:longest
 
@@ -20,6 +21,7 @@ let g:Powerline_symbols = 'fancy'
 let g:vhdl_indent_genportmap = 0
 filetype plugin indent on
 colorscheme solarized
+
 
 autocmd FileType *		set tabstop=4|set shiftwidth=4|set softtabstop=4|set noexpandtab|set foldcolumn=1|highlight Folded ctermfg=darkmagenta ctermbg=black|highlight FoldColumn ctermfg=darkred ctermbg=black
 autocmd FileType vhdl	set expandtab
