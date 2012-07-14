@@ -16,6 +16,7 @@ set t_Co=16
 set wildmenu
 set wildmode=list:longest
 
+let g:solarized_termtrans = 1
 let g:Powerline_symbols = 'fancy'
 
 let g:vhdl_indent_genportmap = 0

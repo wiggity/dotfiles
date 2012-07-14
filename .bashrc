@@ -107,6 +107,7 @@ fi
 alias h='history|tail'
 alias hh='history|tail -n 40'
 alias vi=vim
+alias tmux='tmux -2'
 
 svn() {
 	case "$1" in
