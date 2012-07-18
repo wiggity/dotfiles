@@ -69,9 +69,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
 	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='ls --color=auto'
-	#alias dir='dir --color=auto'
-	#alias vdir='vdir --color=auto'
-
 	alias grep='grep --color=auto'
 	alias fgrep='fgrep --color=auto'
 	alias egrep='egrep --color=auto'
@@ -129,8 +126,16 @@ svn() {
 		esac
 }
 
+
+myhost='\h'
+PS1="${myhost} \W\[\e[0;31m\]$\[\e[m\] "
+
+
 export SVN_EDITOR=vim
 
-PS1='\W\[\e[0;31m\]$\[\e[m\] '
+export PATH=/usr/opt/HDS2008.1/bin:x_common/scripts:~/bin:scripts:/opt/python2.6/bin:/usr/opt/modelsim/6.6d/modeltech/bin:/sbin:/usr/sbin:/usr/opt/Precision_Synthesis_2011a_Update1/Mgc_home/bin:$PATH
 
 
+function wfind() {
+   find . -type f -name "$2" -exec grep -il "$1" {} /dev/null \;
+}
