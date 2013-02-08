@@ -19,3 +19,5 @@
 [credential]
 	helper = cache
 	halper = cache --timeout=7200
+[push]
+	default = simple
