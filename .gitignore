@@ -1,3 +1,4 @@
 .vim/view
 .vim/*.cache
 *.swp
+.vim/.netrwhist
