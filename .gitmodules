@@ -1,6 +1,6 @@
 [submodule "solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-powerline"]
-	path = .vim/bundle/vim-powerline
-	url = https://github.com/wiggity/vim-powerline.git
+#[submodule "vim-powerline"]
+#	path = .vim/bundle/vim-powerline
+#	url = https://github.com/wiggity/vim-powerline.git
