@@ -15,6 +15,8 @@ set bg=dark
 set t_Co=16
 set wildmenu
 set wildmode=list:longest
+set listchars=tab:>-,trail:.
+set expandtab
 
 let g:solarized_termtrans = 1
 let g:Powerline_symbols = 'fancy'
@@ -24,23 +26,23 @@ filetype plugin indent on
 colorscheme solarized
 
 
-autocmd FileType *		set tabstop=4|set shiftwidth=4|set softtabstop=4|set expandtab|set foldcolumn=1|highlight Folded ctermfg=darkmagenta ctermbg=black|highlight FoldColumn ctermfg=darkred ctermbg=black
-autocmd FileType vhdl	set expandtab
+autocmd FileType *      set tabstop=4|set shiftwidth=4|set softtabstop=4|set foldcolumn=1|highlight Folded ctermfg=darkmagenta ctermbg=black|highlight FoldColumn ctermfg=darkred ctermbg=black
+autocmd FileType vhdl   set list
+autocmd FileType vim    set list
+autocmd FileType ruby   set list
+autocmd FileType python set list
 
 augroup vimrc
    au BufReadPre  ?* setlocal foldlevelstart=99|setlocal foldmethod=manual
    au BufWinEnter ?* silent loadview
    au BufWinLeave ?* mkview
-   "au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-   "au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 augroup END
-
 
 " Sets timeout to 200 ms
 set tm=200
 inoremap jk <ESC>
 inoremap kj <ESC>
-
+map <F4> : set list!<LF>
 map <F5> : tabp<LF>
 map <F6> : tabn<LF>
 map <F9> : set foldcolumn=0<LF>
