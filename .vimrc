@@ -1,4 +1,4 @@
-syntax on
+syntax enable
 
 call pathogen#infect()
 
@@ -24,14 +24,13 @@ filetype plugin indent on
 colorscheme solarized
 
 
-autocmd FileType *		set tabstop=4|set shiftwidth=4|set softtabstop=4|set noexpandtab|set foldcolumn=1|highlight Folded ctermfg=darkmagenta ctermbg=black|highlight FoldColumn ctermfg=darkred ctermbg=black
+autocmd FileType *		set tabstop=4|set shiftwidth=4|set softtabstop=4|set expandtab|set foldcolumn=1|highlight Folded ctermfg=darkmagenta ctermbg=black|highlight FoldColumn ctermfg=darkred ctermbg=black
 autocmd FileType vhdl	set expandtab
 
 augroup vimrc
    au BufReadPre  ?* setlocal foldlevelstart=99|setlocal foldmethod=manual
    au BufWinEnter ?* silent loadview
    au BufWinLeave ?* mkview
-   au BufReadPost ?* retab! 4
    "au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
    "au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 augroup END

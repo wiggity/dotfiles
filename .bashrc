@@ -77,6 +77,7 @@ myhost='\h'
 PS1="${myhost} \W\[\e[0;31m\]$\[\e[m\] "
 
 export SVN_EDITOR=vim
+set -o vi
 
 function wfind() {
    find . -type f -name "$2" -exec grep -il "$1" {} /dev/null \;
